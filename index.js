@@ -3,8 +3,6 @@ const express = require('express');
 const app = express();
 //PATH
 const path = require('path')
-//KEYS
-const keys = require('./keys')
 //PORT
 const PORT = process.env.PORT ?? 7171; //connect to port 7171
 //COLORS
