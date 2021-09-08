@@ -107,6 +107,43 @@
   font-size: 2.5rem;
 }
 
+.contactSmall {
+  position: absolute;
+  top: 14%;
+  left: 96%;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 3%;
+}
+
+.contactSmall img {
+  width: 70%;
+  margin: 5% 15%;
+}
+
+.titleHref {
+  display: inline-block;
+}
+
+.titleHref:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  right: 3.5vw;
+  margin-top: 20%;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 0.3rem;
+  z-index: 1;
+}
+
 html,
 body {
   margin: 0;
