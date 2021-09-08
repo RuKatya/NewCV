@@ -1,0 +1,19 @@
+.skills {
+    background-color: $purpleColor;
+    color: $linkColor;
+    text-align: center;
+    padding: 2% 0%;
+
+    &__header {
+        border-bottom: 1px solid white;
+        width: 45%;
+        margin: 0 auto;
+        padding: 0.5% 0%;
+        font-family: 'Monoton', cursive;
+        font-size: 2rem;
+    }
+
+    &__content {
+        font-size: 1.5rem;
+    }
+}
