@@ -9,11 +9,18 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: black;
+  height: 10vh;
 }
 
 .navbar a {
   text-decoration: none;
   font-size: 1.2rem;
+  color: white;
+  margin: 0% 3%;
+}
+
+.navbar a:hover {
+  border-bottom: 1px solid white;
 }
 
 .navbar__topSide {
@@ -27,7 +34,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.2% 0%;
+  padding: 1%;
+  height: 2vh;
 }
 
 .navbar__topSide--left {
@@ -39,15 +47,6 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 20%;
-}
-
-.navbar__topSide--left a {
-  margin: 0% 5%;
-  color: white;
-  width: 100%;
-  padding: 2% 3%;
-  margin: 2% 3%;
-  text-align: center;
 }
 
 .navbar__buttomSide {
@@ -65,11 +64,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 1% 0%;
-}
-
-.navbar__buttomSide > a {
-  margin: 0% 2%;
-  color: white;
+  height: 2vh;
 }
 
 .intro {
@@ -78,7 +73,7 @@
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5) 60%), url("../../image/keybord.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,23 +90,25 @@
   color: white;
 }
 
-.intro > h1 {
+.intro__content > h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
   margin: 0;
   font-size: 3rem;
 }
 
-.intro > h2 {
+.intro__content > h2 {
   font-size: 2.5rem;
 }
 
 .contactSmall {
-  position: absolute;
-  top: 14%;
+  position: fixed;
+  top: 42%;
   left: 96%;
   float: right;
   display: -webkit-box;
