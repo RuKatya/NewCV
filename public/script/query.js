@@ -12,4 +12,8 @@ $(window).scroll(function () {
     }
 });
 
+let el = $(this).attr('href');
+$('body').animate({
+    scrollTop: $(el).offset().top
+}, 2000);
 
