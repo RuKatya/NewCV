@@ -29,3 +29,24 @@
         z-index: 1;
     }
 }
+
+.contactBig {
+    // margin: 0;
+    // padding: 0;
+    // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.950), rgba(0, 0, 0, 0.8)60%), url('/image/connecting.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    height: 100vh;
+
+    &__content {
+        background-color: rgba(118, 118, 206, 0.281);
+        width: 60%;
+        margin: 1% auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}

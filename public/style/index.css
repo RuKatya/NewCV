@@ -147,6 +147,26 @@
   z-index: 1;
 }
 
+.contactBig {
+  height: 100vh;
+}
+
+.contactBig__content {
+  background-color: rgba(118, 118, 206, 0.281);
+  width: 60%;
+  margin: 1% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .skills {
   background-color: #320d3e;
   color: white;
@@ -219,8 +239,13 @@
   margin: 5% auto;
 }
 
+.works a {
+  text-decoration: none;
+  color: black;
+}
+
 .works__project {
-  background-color: aqua;
+  background-color: rgba(90, 184, 255, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,6 +257,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 3% 0%;
+  padding: 2%;
   height: 20vh;
   width: 80%;
 }
@@ -239,11 +265,39 @@
 .works__project > img {
   width: 30%;
   height: 100%;
+  background-color: white;
+  padding: 0.5%;
+}
+
+.works__project > p,
+.works__project > div {
+  margin: 0% 1%;
 }
 
 .works__project:nth-child(even) {
   position: relative;
   left: 20%;
+}
+
+.btnUp {
+  position: fixed;
+  top: 95%;
+  left: 2%;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: -10rem;
+  left: 1%;
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.back-to-top.active {
+  bottom: 3%;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 html,
