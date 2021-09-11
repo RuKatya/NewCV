@@ -3,12 +3,11 @@
     margin: 5% auto;
 
     & a {
-        text-decoration: none;
         color: black;
     }
 
     &__project {
-        background-color: rgba(90, 184, 255, 0.3);
+        background-color: $blueBackgroung;
         display: flex;
         flex-direction: row;
         align-items: center;

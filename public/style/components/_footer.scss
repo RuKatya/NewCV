@@ -1,0 +1,14 @@
+.createdBy {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: $linkColor;
+    height: 8vh;
+    justify-content: center;
+    align-items: center;
+
+    & a {
+        padding: 0% 2%;
+        color: $linkColor;
+    }
+}

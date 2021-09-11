@@ -5,15 +5,27 @@ $('.back-to-top').click(function () {
 $(window).scroll(function () {
     let scrolled = $(window).scrollTop();
 
-    if (scrolled > 350) {
+    if (scrolled > 450) {
         $('.back-to-top').addClass('active');
     } else {
         $('.back-to-top').removeClass('active');
     }
 });
 
-let el = $(this).attr('href');
-$('body').animate({
-    scrollTop: $(el).offset().top
-}, 2000);
+$("#worksBtn").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#works").offset().top
+    }, 0);
+});
 
+$("#skillsBtn").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#skills").offset().top
+    }, 0);
+});
+
+$("#contactBtn").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#contacts").offset().top
+    }, 0);
+});

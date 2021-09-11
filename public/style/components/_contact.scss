@@ -22,31 +22,35 @@
         content: attr(data-title);
         position: absolute;
         right: 3.5vw;
-        margin-top: 20%;
+        margin-top: 15%;
         font-size: 1.1rem;
         color: white;
         border-radius: 0.3rem;
-        z-index: 1;
+        z-index: 2;
+        background-color: rgba(128, 128, 128, 0.507);
+        padding: 5% 10%;
     }
 }
 
 .contactBig {
-    // margin: 0;
-    // padding: 0;
-    // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.950), rgba(0, 0, 0, 0.8)60%), url('/image/connecting.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-    height: 100vh;
+    font-size: 1.2rem;
+
+    & a {
+        color: purple;
+    }
 
     &__content {
-        background-color: rgba(118, 118, 206, 0.281);
+        background-color: $blueBackgroung;
         width: 60%;
-        margin: 1% auto;
+        margin: 5% auto;
+        padding: 3% 0%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__contact {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-
 }

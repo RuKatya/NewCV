@@ -8,6 +8,7 @@
 @import './components/skills';
 @import './components/works';
 @import './components/btnUp';
+@import './components/footer';
 
 html,
 body {
@@ -15,4 +16,8 @@ body {
     padding: 0;
     scroll-behavior: smooth;
     font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
