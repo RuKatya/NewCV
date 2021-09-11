@@ -1,0 +1,27 @@
+#aboutme {
+    color: white;
+    z-index: 1;
+    font-size: 1.2rem;
+
+    &:hover {
+        border-bottom: $borderBtn;
+    }
+}
+
+.aboutme {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+    &__popUp {
+        width: 80%;
+        background-color: blue;
+        margin: 5% auto;
+        font-size: 1.2rem;
+        height: 70vh;
+    }
+}

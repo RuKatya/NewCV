@@ -4,8 +4,12 @@
     background-color: black;
     height: 12vh;
 
+    & p {
+        padding: 0;
+        margin: 0;
+    }
+
     & a {
-        // text-decoration: none;
         font-size: 1.2rem;
         color: $linkColor;
         margin: 0% 3%;
@@ -53,6 +57,5 @@
         align-items: center;
         padding: 1% 0%;
         height: 3vh;
-        // background-color: hotpink;
     }
 }

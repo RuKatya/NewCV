@@ -12,6 +12,11 @@
   height: 12vh;
 }
 
+.navbar p {
+  padding: 0;
+  margin: 0;
+}
+
 .navbar a {
   font-size: 1.2rem;
   color: white;
@@ -418,6 +423,34 @@
 .createdBy a {
   padding: 0% 2%;
   color: white;
+}
+
+#aboutme {
+  color: white;
+  z-index: 1;
+  font-size: 1.2rem;
+}
+
+#aboutme:hover {
+  border-bottom: 1px solid white;
+}
+
+.aboutme {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.aboutme__popUp {
+  width: 80%;
+  background-color: blue;
+  margin: 5% auto;
+  font-size: 1.2rem;
+  height: 70vh;
 }
 
 html,
