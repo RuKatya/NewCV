@@ -11,9 +11,11 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-around;
         margin: 3% 0%;
         padding: 2%;
-        height: 20vh;
+        // height: 20vh;
+        font-size: 1.2rem;
         width: 80%;
 
         &>img {
@@ -42,12 +44,24 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
+
+            &>h2 {
+                color: blueviolet
+            }
         }
 
         &--links {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+
+            &>a {
+                color: $linkColor;
+                background-color: hotpink;
+                padding: 0.5% 1%;
+                border-radius: 0.5rem;
+            }
         }
     }
 }

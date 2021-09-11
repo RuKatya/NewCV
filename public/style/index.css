@@ -28,7 +28,7 @@
   border: none;
   font-size: 1.2rem;
   color: white;
-  height: 3vh;
+  height: 2.6vh;
   margin: 0% 3%;
 }
 
@@ -164,6 +164,8 @@
 
 .contactBig {
   font-size: 1.2rem;
+  width: 60%;
+  margin: 5% auto;
 }
 
 .contactBig a {
@@ -171,9 +173,7 @@
 }
 
 .contactBig__content {
-  background-color: rgba(189, 226, 255, 0.3);
-  width: 60%;
-  margin: 5% auto;
+  background-color: rgba(221, 218, 218, 0.3);
   padding: 3% 0%;
   display: -ms-grid;
   display: grid;
@@ -271,7 +271,7 @@
 }
 
 .works__project {
-  background-color: rgba(189, 226, 255, 0.3);
+  background-color: rgba(221, 218, 218, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,9 +282,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 3% 0%;
   padding: 2%;
-  height: 20vh;
+  font-size: 1.2rem;
   width: 80%;
 }
 
@@ -326,6 +328,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+}
+
+.works__project--info > h2 {
+  color: blueviolet;
 }
 
 .works__project--links {
@@ -339,6 +346,13 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.works__project--links > a {
+  color: white;
+  background-color: hotpink;
+  padding: 0.5% 1%;
+  border-radius: 0.5rem;
 }
 
 .back-to-top {

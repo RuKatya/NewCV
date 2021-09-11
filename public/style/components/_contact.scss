@@ -34,6 +34,8 @@
 
 .contactBig {
     font-size: 1.2rem;
+    width: 60%;
+    margin: 5% auto;
 
     & a {
         color: purple;
@@ -41,8 +43,8 @@
 
     &__content {
         background-color: $blueBackgroung;
-        width: 60%;
-        margin: 5% auto;
+        // width: 60%;
+        // margin: 5% auto;
         padding: 3% 0%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
