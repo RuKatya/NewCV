@@ -19,9 +19,41 @@
 
     &__popUp {
         width: 80%;
-        background-color: blue;
+        background-color: white;
         margin: 5% auto;
         font-size: 1.2rem;
         height: 70vh;
+        padding: 2%;
+    }
+
+    &__close {
+        width: 2%;
+        text-align: center;
+        padding: 0.3% 0%;
+        border-radius: $borderRadius;
+        background-color: $pinkBtn;
+        color: white;
+        position: relative;
+        left: 97%;
+
+        &:hover {
+            background-color: $hoverPinkBtn;
+            transition: $transition;
+        }
+    }
+
+    &__info {
+        & h1 {
+            color: purple;
+        }
+
+        & p {
+            line-height: 2rem;
+
+            &:first-letter {
+                font-size: 2rem;
+                color: purple;
+            }
+        }
     }
 }

@@ -58,13 +58,13 @@
 
             &>a {
                 color: $linkColor;
-                background-color: hotpink;
+                background-color: $pinkBtn;
                 padding: 0.5% 1%;
                 border-radius: $borderRadius;
                 transition: $transition;
 
                 &:hover {
-                    background-color: rgb(131, 36, 134);
+                    background-color: $hoverPinkBtn;
                 }
             }
         }
