@@ -10,10 +10,10 @@
                             <h1>Good day,</h1>
                             <% } else if (date.getHours()>18) { %>
                                 <h1>Good evening,</h1>
-                                <% } else if (date.getHours()>22) { %>
+                                <% } else if (date.getHours()>22 || date.getHours()>0) { %>
                                     <h1>Good night,</h1>
                                     <% } else { %>
-                                        <h1>Good night,</h1>
+                                        <h1>Good day,</h1>
                                         <% } %>
 
                                             <div class="tooltip">Hobbies
