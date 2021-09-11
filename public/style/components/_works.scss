@@ -60,7 +60,12 @@
                 color: $linkColor;
                 background-color: hotpink;
                 padding: 0.5% 1%;
-                border-radius: 0.5rem;
+                border-radius: $borderRadius;
+                transition: $transition;
+
+                &:hover {
+                    background-color: rgb(131, 36, 134);
+                }
             }
         }
     }
