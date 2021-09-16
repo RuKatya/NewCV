@@ -15,14 +15,4 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/moreabout', async (req, res) => {
-    try {
-        res.render('aboutme', {
-            title: 'Katya Ru'
-        })
-    } catch (err) {
-        console.log(color.bgRed.black(err))
-    }
-})
-
 module.exports = router;
