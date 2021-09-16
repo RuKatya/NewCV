@@ -26,6 +26,7 @@ To make the page easy to use, I added jQuery, for automatically scrolled to wher
 
 <h2 style="color: rgb(76, 76, 155);">Project creation process</h2>
 In the server I used:
+
 - NodeJS
 - Colors
 - Express
