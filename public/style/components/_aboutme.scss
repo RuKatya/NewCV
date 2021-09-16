@@ -1,7 +1,7 @@
 #aboutme {
-    color: white;
+    color: $linkColorAndText;
     z-index: 1;
-    font-size: 1.2rem;
+    font-size: $fontSize;
 
     &:hover {
         border-bottom: $borderBtn;
@@ -21,7 +21,7 @@
         width: 80%;
         background-color: white;
         margin: 10% auto;
-        font-size: 1.2rem;
+        font-size: $fontSize;
         padding: 2%;
     }
 
@@ -29,9 +29,10 @@
         width: 2%;
         text-align: center;
         padding: 0.25% 0%;
+        margin: $noPandM;
         border-radius: $borderRadius;
         background-color: $pinkBtn;
-        color: white;
+        color: $linkColorAndText;
         position: relative;
         left: 97%;
 
@@ -43,7 +44,7 @@
 
     &__info {
         & h1 {
-            color: purple;
+            color: $purpleColor;
         }
 
         & p {
@@ -51,7 +52,7 @@
 
             &:first-letter {
                 font-size: 2rem;
-                color: purple;
+                color: $purpleColor;
             }
         }
     }
@@ -79,7 +80,7 @@
     width: 10vw;
     line-height: 2rem;
     background-color: rgba(80, 175, 253, 0.87);
-    color: #fff;
+    color: $linkColorAndText;
     padding: 10%;
     position: absolute;
     top: -17vh;
@@ -95,8 +96,8 @@
 }
 
 ul {
-    padding: 0;
-    margin: 0;
+    padding: $noPandM;
+    margin: $noPandM;
 }
 
 li {

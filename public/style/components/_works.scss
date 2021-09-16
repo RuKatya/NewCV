@@ -15,7 +15,7 @@
         margin: 3% 0%;
         padding: 2%;
         // height: 20vh;
-        font-size: 1.2rem;
+        font-size: $fontSize;
         width: 80%;
 
         &>img {
@@ -57,7 +57,7 @@
             justify-content: space-evenly;
 
             &>a {
-                color: $linkColor;
+                color: $linkColorAndText;
                 background-color: $pinkBtn;
                 padding: 0.5% 1%;
                 border-radius: $borderRadius;

@@ -8,14 +8,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: $linkColor;
+    color: $linkColorAndText;
 
     &__content {
         &>h1 {
             display: flex;
             justify-content: center;
-            padding: 0;
-            margin: 0;
+            padding: $noPandM;
+            margin: $noPandM;
             font-size: 3rem;
         }
 

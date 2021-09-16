@@ -457,6 +457,7 @@
   width: 2%;
   text-align: center;
   padding: 0.25% 0%;
+  margin: 0;
   border-radius: 0.5rem;
   background-color: hotpink;
   color: white;
@@ -526,6 +527,196 @@ ul {
 
 li {
   list-style: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar {
+    height: 10vh;
+  }
+  .navbar a {
+    font-size: 1.5rem;
+    margin: 1% 5%;
+  }
+  .navbar button {
+    font-size: 1.5rem;
+    margin: 0% 5%;
+  }
+  .navbar__topSide {
+    padding: 1%;
+    height: 2vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contactSmall {
+    position: fixed;
+    top: 48%;
+    left: 94%;
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 3%;
+  }
+  .contactSmall img {
+    width: 70%;
+    margin: 5% 15%;
+  }
+  .titleHref {
+    display: inline-block;
+  }
+  .titleHref:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    right: 3.5vw;
+    margin-top: 15%;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 0.3rem;
+    z-index: 2;
+    background-color: rgba(128, 128, 128, 0.507);
+    padding: 5% 10%;
+  }
+  .contactBig {
+    font-size: 1.2rem;
+    width: 60%;
+    margin: 5% auto;
+  }
+  .contactBig a {
+    color: purple;
+  }
+  .contactBig a:hover {
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    color: #0e1eaf;
+    font-weight: bold;
+  }
+  .contactBig__content {
+    background-color: rgba(221, 218, 218, 0.3);
+    padding: 3% 0%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .contactBig__contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.works {
+  width: 80%;
+  margin: 5% auto;
+}
+
+.works a {
+  color: black;
+}
+
+.works__project {
+  background-color: rgba(221, 218, 218, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 3% 0%;
+  padding: 2%;
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+.works__project > img {
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  padding: 0.5%;
+}
+
+.works__project > p,
+.works__project > div {
+  margin: 0% 1%;
+}
+
+.works__project:nth-child(even) {
+  position: relative;
+  left: 20%;
+}
+
+.works__project--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.works__project--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.works__project--info > h2 {
+  color: blueviolet;
+}
+
+.works__project--links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.works__project--links > a {
+  color: white;
+  background-color: hotpink;
+  padding: 0.5% 1%;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.works__project--links > a:hover {
+  background-color: #832486;
 }
 
 html,

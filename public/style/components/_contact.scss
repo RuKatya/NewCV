@@ -24,7 +24,7 @@
         right: 3.5vw;
         margin-top: 15%;
         font-size: 1.1rem;
-        color: white;
+        color: $linkColorAndText;
         border-radius: 0.3rem;
         z-index: 2;
         background-color: rgba(128, 128, 128, 0.507);
@@ -33,12 +33,12 @@
 }
 
 .contactBig {
-    font-size: 1.2rem;
+    font-size: $fontSize;
     width: 60%;
     margin: 5% auto;
 
     & a {
-        color: purple;
+        color: $purpleColor;
 
         &:hover {
             transition: $transition;
