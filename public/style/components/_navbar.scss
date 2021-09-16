@@ -59,3 +59,10 @@
         height: 3vh;
     }
 }
+
+.cvAndCerti {
+    display: flex;
+     flex-direction: row;
+     width:15%;
+     justify-content: space-around;
+}
