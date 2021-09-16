@@ -4,6 +4,13 @@
     background-color: black;
     height: 12vh;
 
+    &__cvAndCert {
+        display: flex;
+        flex-direction: row;
+        width: 15%;
+        justify-content: space-around;
+    }
+
     & p {
         padding: $noPandM;
         margin: $noPandM;
@@ -23,7 +30,7 @@
         font-family: 'Quicksand', sans-serif;
         background: none;
         border: none;
-        font-size:$fontSize;
+        font-size: $fontSize;
         color: $linkColorAndText;
         // padding: 0.5% 0%;
         height: 2.6vh;
@@ -58,11 +65,4 @@
         padding: 1% 0%;
         height: 3vh;
     }
-}
-
-.cvAndCerti {
-    display: flex;
-     flex-direction: row;
-     width:15%;
-     justify-content: space-around;
 }
