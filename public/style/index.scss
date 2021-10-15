@@ -11,13 +11,19 @@
 @import './components/footer';
 @import './components/aboutme';
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
 html,
 body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
 }
 
 a {
