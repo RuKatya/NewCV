@@ -46,6 +46,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   color: white;
+  position: relative;
 }
 
 .navbar__info--header {
@@ -76,8 +77,8 @@
   background: none;
   border: none;
   font-size: calc(0.9rem + 0.2rem);
-  padding: 0.5% 0%;
-  height: 4vh;
+  padding: 1% 0%;
+  height: 4.5vh;
   cursor: pointer;
 }
 
@@ -103,6 +104,7 @@
         -ms-flex-direction: row;
             flex-direction: row;
     height: 4.5vh;
+    right: 2%;
   }
   .navbar__trek {
     padding: 6% 30% 2% 30%;
@@ -114,6 +116,15 @@
 }
 
 @media (min-width: 1220px) {
+  .navbar__info {
+    padding: 0.7% 0%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 4.5vh;
+    right: 1%;
+  }
   .navbar__trek {
     padding: 4% 30% 1% 30%;
   }
@@ -507,7 +518,7 @@
     margin: 2% auto;
   }
   .works__project > img {
-    width: 40%;
+    width: 30%;
   }
   .works__project > p,
   .works__project > div {

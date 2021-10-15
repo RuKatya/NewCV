@@ -34,6 +34,7 @@
         align-items: center;
         justify-content: space-evenly;
         color: white;
+        position: relative;
 
         &--header {
             font-size: calc(0.9rem + 0.2rem);
@@ -87,7 +88,7 @@
             padding: 0.7% 0%;
             flex-direction: row;
             height: 4.5vh;
-
+            right: 2%;
         }
 
         &__trek {
@@ -103,6 +104,14 @@
 
 @media (min-width: 1220px) {
     .navbar {
+
+        &__info {
+            padding: 0.7% 0%;
+            flex-direction: row;
+            height: 4.5vh;
+            right: 1%;
+        }
+
         &__trek {
             padding: 4% 30% 1% 30%;
         }
