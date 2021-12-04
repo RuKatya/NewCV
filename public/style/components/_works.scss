@@ -49,6 +49,12 @@
             }
         }
 
+        &--email-pass {
+            color:rgb(43, 92, 226);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         &--links {
             display: flex;
             flex-direction: row;

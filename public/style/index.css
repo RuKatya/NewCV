@@ -465,6 +465,14 @@
   margin: 5% 0%;
 }
 
+.works__project--email-pass {
+  color: #2b5ce2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
 .works__project--links {
   display: -webkit-box;
   display: -ms-flexbox;
