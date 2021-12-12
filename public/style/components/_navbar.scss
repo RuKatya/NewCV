@@ -71,6 +71,16 @@
     }
 }
 
+select {
+    position: absolute;
+    z-index: 1;
+    top: 85%;
+    left: 41%;
+    background: black;
+    color: white;
+    padding: 0.2%;
+}
+
 @media (min-width: 700px) {
     .navbar {
         &__menuBtn {
@@ -100,7 +110,14 @@
             }
         }
     }
+
+    select {
+        top: 30%;
+        left: 2%;
+    }
 }
+
+
 
 @media (min-width: 1220px) {
     .navbar {

@@ -34,11 +34,9 @@ $('#aboutme__popup').hide();
 
 $('#aboutme').click(function () {
     $('#aboutme__popup').fadeIn();
-    $('html, body').css('overflow', 'hidden');
 })
 
 $('#close').click(function () {
     $('#aboutme__popup').fadeOut();
-    $('html, body').css('overflow', 'auto');
 })
 

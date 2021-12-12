@@ -24,8 +24,6 @@
         border-radius: $borderRadius;
         background-color: $pinkBtn;
         color: $linkColorAndText;
-        position: relative;
-        left: 87%;
 
         &:hover {
             background-color: $hoverPinkBtn;
@@ -37,11 +35,12 @@
         & h1 {
             color: $purpleColor;
             position: relative;
-            top: 2.5vh;
+            top: 0.2vh;
         }
 
         & p {
             line-height: 2rem;
+            margin: 2% 0%;
 
             &:first-letter {
                 font-size: 2rem;

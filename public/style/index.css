@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
 .navbar__menuBtn {
   position: absolute;
   top: calc(-0.5% + 0.2%);
@@ -86,6 +87,16 @@
   border-bottom: 1px solid white;
 }
 
+select {
+  position: absolute;
+  z-index: 1;
+  top: 85%;
+  left: 41%;
+  background: black;
+  color: white;
+  padding: 0.2%;
+}
+
 @media (min-width: 700px) {
   .navbar__menuBtn {
     display: none;
@@ -112,6 +123,10 @@
   .navbar__trek--header {
     padding: 0%;
     height: 3vh;
+  }
+  select {
+    top: 30%;
+    left: 2%;
   }
 }
 
@@ -641,8 +656,6 @@
   border-radius: 0.5rem;
   background-color: hotpink;
   color: white;
-  position: relative;
-  left: 87%;
 }
 
 .aboutme__close:hover {
@@ -654,11 +667,12 @@
 .aboutme__info h1 {
   color: purple;
   position: relative;
-  top: 2.5vh;
+  top: 0.2vh;
 }
 
 .aboutme__info p {
   line-height: 2rem;
+  margin: 2% 0%;
 }
 
 .aboutme__info p:first-letter {
