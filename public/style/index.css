@@ -515,6 +515,24 @@ select {
   background-color: #832486;
 }
 
+.moreBtn {
+  width: 50%;
+  margin: 7vh auto 0% auto;
+  text-align: center;
+}
+
+.moreBtn > a {
+  color: white;
+  background-color: #2b5ce2;
+  padding: 5% 10%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.moreBtn > a:hover {
+  background-color: rgba(80, 124, 246, 0.9);
+}
+
 @media (min-width: 700px) {
   .works {
     margin: 5% auto;
@@ -525,6 +543,9 @@ select {
   .works__project--links > a {
     margin: 5% 0%;
     padding: 0.8% 2.8%;
+  }
+  .moreBtn > a {
+    padding: 3% 10%;
   }
 }
 
@@ -553,6 +574,12 @@ select {
   .works__project--links > a {
     margin: 3% 0%;
     padding: 0.5% 2%;
+  }
+  .moreBtn {
+    margin: 5vh auto 5vh auto;
+  }
+  .moreBtn > a {
+    padding: 1.5% 5%;
   }
 }
 

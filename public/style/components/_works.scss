@@ -50,7 +50,7 @@
         }
 
         &--email-pass {
-            color:rgb(43, 92, 226);
+            color: rgb(43, 92, 226);
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
@@ -76,6 +76,23 @@
     }
 }
 
+.moreBtn {
+    width: 50%;
+    margin: 7vh auto 0% auto;
+    text-align: center;
+
+    >a {
+        color: white;
+        background-color: rgb(43, 92, 226);
+        padding: 5% 10%;
+        transition: all 0.4s;
+
+        &:hover {
+            background-color: rgba(80, 124, 246, 0.9);
+        }
+    }
+}
+
 @media (min-width: 700px) {
     .works {
         margin: 5% auto;
@@ -93,6 +110,12 @@
                     padding: 0.8% 2.8%;
                 }
             }
+        }
+    }
+
+    .moreBtn {
+        >a {
+            padding: 3% 10%;
         }
     }
 }
@@ -128,6 +151,14 @@
                     padding: 0.5% 2%;
                 }
             }
+        }
+    }
+
+    .moreBtn {
+        margin: 5vh auto 5vh auto;
+
+        >a {
+            padding: 1.5% 5%;
         }
     }
 }
