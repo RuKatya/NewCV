@@ -1,0 +1,44 @@
+{
+    "projects": [
+        {
+            "name": "Quiz please",
+            "usedTo": [
+                "React",
+                "MongoDB",
+                "NodeJS",
+                "SCSS"
+            ],
+            "desc": "This project is a trivia questionnaire with a time limit. The trivia contains 23 questions which are limited to 10 minute. The questionnaire can be answered alone or with friends.",
+            "moreInfo": "Come on in, take a look and enjoy!",
+            "img": "",
+            "url": "https://quiz-question-app.herokuapp.com/",
+            "gitHub": "https://github.com/RuKatya/Quiz-project"
+        },
+        {
+            "name": "Task site",
+            "usedTo": [
+                "EJS",
+                "MongoDB",
+                "NodeJS",
+                "TypeScript",
+                "SCSS"
+            ],
+            "desc": "This project was built independently of my studies with the knowledge learned from my courses as well as self-taught skills. The site is a pesonalised to do list app.",
+            "img": "",
+            "url": "https://quiz-question-app.herokuapp.com/",
+            "gitHub": "https://github.com/RuKatya/Remembers"
+        },
+        {
+            "name": "Weather app",
+            "usedTo": [
+                "React",
+                "API",
+                "SCSS"
+            ],
+            "desc": "Practicing use of weather API <a href='https://openweathermap.org/'>(OpenWeather)</a>. You can enter any city name in the world and get back information. Input is validated to English and digits. While playing with up you will find that icons and pictures are interactive. Can be used both on mobile and desktop.",
+            "img": "",
+            "url": "https://quiz-question-app.herokuapp.com/",
+            "gitHub": "https://github.com/RuKatya/Weather-app"
+        }
+    ]
+}
