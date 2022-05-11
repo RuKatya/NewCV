@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const EnterPage = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  //   const [touch, setTouch] = useState(false);
+  const [touch, setTouch] = useState(false);
 
   const colors: Array<string> = [
     "rgb(204, 109, 109)",
@@ -38,23 +38,21 @@ const EnterPage = () => {
         removeColor(square);
       });
 
-      //   square.addEventListener("touchstart", () => {
-      //     setTouch(true);
-      //   });
+      square.addEventListener("touchstart", () => {
+        setTouch(true);
+      });
 
-      //   square.addEventListener("touchend", () => {
-      //     setTouch(false);
-      //   });
+      square.addEventListener("touchend", () => {
+        setTouch(false);
+      });
 
-      //   square.addEventListener("touchmove", (e: TouchEvent) => {
-      //     const target = e.target as Element;
-      //     console.log(target.classList[0]);
-      //     if (touch === true) {
-      //       setColor(target.classList[0]);
-      //     }
-
-      //     // console.log(square);
-      //   });
+      square.addEventListener("touchmove", (e: TouchEvent) => {
+        const target = e.target as Element;
+        console.log(target.classList[0]);
+        if (touch === true) {
+          setColor(target.classList[0]);
+        }
+      });
 
       board?.append(square);
     }
@@ -81,7 +79,7 @@ const EnterPage = () => {
     <div className="enterPage">
       <div className="enterPage__container" id="board"></div>
       <div className="enterPage__greetings">
-        <p>Hello, I'm Katya Ru.</p>
+        <p>Hello, I'm Katya Rukosuev.</p>
         <p>I'm a full-stack web developer.</p>
       </div>
     </div>

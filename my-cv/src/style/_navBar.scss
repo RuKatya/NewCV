@@ -1,0 +1,8 @@
+.navBar {
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    font-size: clamp(20px, 2vw, 30px);
+    padding: 0% 3%;
+    transition: 1s ease;
+}

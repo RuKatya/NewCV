@@ -3,6 +3,8 @@ import axios from "axios";
 import Alert from "react-bootstrap/Alert";
 import EnterPage from "../Components/EnterPage";
 import "../../style/index.scss";
+import NavBar from "../Components/NavBar";
+import About from "../Components/About";
 
 function App() {
   const [projects, setProjects] = useState();
@@ -49,6 +51,8 @@ function App() {
   return (
     <div className="App">
       <EnterPage />
+      <NavBar />
+      <About />
       {/* {projects ? <div>Yes</div> : <div>No</div>}
       <form onSubmit={sendData}>
         <input type="text" name="email" id="" />
