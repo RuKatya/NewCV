@@ -10,8 +10,12 @@ const PorjectSchema = new Schema({
     desc: {
         type: String,
     },
-    img: {
+    mainImg: {
         type: String
+    },
+    subImg: {
+        type: Array,
+        data: Buffer
     },
     url: {
         type: String

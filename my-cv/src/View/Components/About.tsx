@@ -2,15 +2,15 @@ import React from "react";
 
 const About = () => {
   return (
-    <div>
-      <div>
-        {/* <img src="" alt="img" /> */}
-        <p>
+    <div className="about">
+      <h2>About</h2>
+      <div className="about__content">
+        <p className="about__content--infoText">
           text about me text about metext about metext about metext about me
           text about me text about metext about metext about metext about metext
           about me text about metext about metext about metext about me
         </p>
-        <ul>
+        <ul className="about__content--skills">
           <li>HTML</li>
           <li>SCSS</li>
           <li>JavaScript</li>
