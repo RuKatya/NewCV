@@ -4,9 +4,7 @@ import bcrypt from 'bcryptjs';
 
 export const hendleReg = async (req, res) => {
     try {
-        console.log(req.body.userData);
         const { name, password } = req.body.userData
-        console.log(name, password)
 
         if (name && password) {
             const hashpassword = await bcrypt.hash(password, 10)
@@ -30,13 +28,10 @@ export const hendleReg = async (req, res) => {
 
 export const hendleLogin = async (req, res) => {
     try {
-        console.log(req.body.userData);
         const { name, password } = req.body.userData
-        console.log(name, password)
 
         if (name) {
             const user = await User.findOne({ name })
-            console.log(user)
             const areSame = await bcrypt.compare(password, user.password)
 
             if (areSame) {

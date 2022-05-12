@@ -46,9 +46,7 @@ exports.hendleReg = function (req, res) { return __awaiter(void 0, void 0, void 
         switch (_b.label) {
             case 0:
                 _b.trys.push([0, 7, , 8]);
-                console.log(req.body.userData);
                 _a = req.body.userData, name = _a.name, password = _a.password;
-                console.log(name, password);
                 if (!(name && password)) return [3 /*break*/, 6];
                 return [4 /*yield*/, bcryptjs_1["default"].hash(password, 10)];
             case 1:
@@ -86,14 +84,11 @@ exports.hendleLogin = function (req, res) { return __awaiter(void 0, void 0, voi
         switch (_b.label) {
             case 0:
                 _b.trys.push([0, 4, , 5]);
-                console.log(req.body.userData);
                 _a = req.body.userData, name = _a.name, password = _a.password;
-                console.log(name, password);
                 if (!name) return [3 /*break*/, 3];
                 return [4 /*yield*/, user_1["default"].findOne({ name: name })];
             case 1:
                 user = _b.sent();
-                console.log(user);
                 return [4 /*yield*/, bcryptjs_1["default"].compare(password, user.password)];
             case 2:
                 areSame = _b.sent();

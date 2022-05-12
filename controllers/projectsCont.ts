@@ -18,27 +18,12 @@ export const hendleAddProject = async (req, res) => {
         const { userInfo } = req.cookies;
         const { formObj } = req.body
         const decoded = jwt.decode(userInfo, process.env.SECRET);
-        console.log(decoded)
         const { name, role } = decoded
 
         const user = await User.findOne({ name })
         console.log(user)
 
         if (decoded && role == user.role) {
-            console.log(true)
-            console.log(formObj)
-
-            // const obj = {}
-            // fileMiddleware.create(obj, (err, item) => {
-            //     if (err) {
-            //         console.log(err);
-            //     }
-            //     else {
-            //         // item.save();
-            //         res.redirect('/');
-            //     }
-            // });
-
             const newProject = new Project(formObj)
             const result = await newProject.save()
             res.send({ ok: true, result })

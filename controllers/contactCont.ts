@@ -6,8 +6,6 @@ export const hendleSaveMessage = async (req, res) => {
         const { name, email, message } = req.body
 
         const errors = validationResult(req)
-
-        console.log(errors)
         if (!errors.isEmpty()) {
             try {
                 console.log(errors.array()[0].msg)
@@ -18,7 +16,6 @@ export const hendleSaveMessage = async (req, res) => {
         }
 
         if (name && email && message) {
-            console.log(name, email, message)
             try {
                 const userContact = new Contact({ name, email, message })
                 await userContact.save()

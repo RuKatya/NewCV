@@ -36,58 +36,52 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.hendleAddProject = exports.hendleGetAllProjects = void 0;
-var jwt_simple_1 = require("jwt-simple");
-var projects_1 = require("../models/projects");
-var user_1 = require("../models/user");
-var fileMiddleware = require('../middleware/file').any();
-exports.hendleGetAllProjects = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var projects, error_1;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
+exports.hendleSaveMessage = void 0;
+var contact_1 = require("../models/contact");
+var express_validator_1 = require("express-validator");
+exports.hendleSaveMessage = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var _a, name, email, message, errors, userContact, error_1, error_2;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
             case 0:
-                _a.trys.push([0, 2, , 3]);
-                return [4 /*yield*/, projects_1["default"].find()];
+                _b.trys.push([0, 7, , 8]);
+                _a = req.body, name = _a.name, email = _a.email, message = _a.message;
+                errors = express_validator_1.validationResult(req);
+                if (!errors.isEmpty()) {
+                    try {
+                        console.log(errors.array()[0].msg);
+                        return [2 /*return*/, res.send({ errors: errors.array()[0].msg })];
+                    }
+                    catch (error) {
+                        console.log(error);
+                    }
+                }
+                if (!(name && email && message)) return [3 /*break*/, 5];
+                _b.label = 1;
             case 1:
-                projects = _a.sent();
-                res.send(projects);
-                return [3 /*break*/, 3];
+                _b.trys.push([1, 3, , 4]);
+                userContact = new contact_1["default"]({ name: name, email: email, message: message });
+                return [4 /*yield*/, userContact.save()];
             case 2:
-                error_1 = _a.sent();
+                _b.sent();
+                res.send({ message: 'we get the message' });
+                return [3 /*break*/, 4];
+            case 3:
+                error_1 = _b.sent();
                 console.log(error_1);
-                return [3 /*break*/, 3];
-            case 3: return [2 /*return*/];
-        }
-    });
-}); };
-exports.hendleAddProject = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var userInfo, formObj, decoded, name, role, user, newProject, result, error_2;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                _a.trys.push([0, 4, , 5]);
-                userInfo = req.cookies.userInfo;
-                formObj = req.body.formObj;
-                decoded = jwt_simple_1["default"].decode(userInfo, process.env.SECRET);
-                name = decoded.name, role = decoded.role;
-                return [4 /*yield*/, user_1["default"].findOne({ name: name })];
-            case 1:
-                user = _a.sent();
-                console.log(user);
-                if (!(decoded && role == user.role)) return [3 /*break*/, 3];
-                newProject = new projects_1["default"](formObj);
-                return [4 /*yield*/, newProject.save()];
-            case 2:
-                result = _a.sent();
-                res.send({ ok: true, result: result });
-                return [2 /*return*/];
-            case 3: throw new Error("user is not allowed");
-            case 4:
-                error_2 = _a.sent();
-                console.log("Error on aAddProject:", error_2.message);
-                res.send({ error: error_2.message });
-                return [3 /*break*/, 5];
-            case 5: return [2 /*return*/];
+                res.send(error_1);
+                return [3 /*break*/, 4];
+            case 4: return [3 /*break*/, 6];
+            case 5:
+                res.send({ error: 'something miss' });
+                _b.label = 6;
+            case 6: return [3 /*break*/, 8];
+            case 7:
+                error_2 = _b.sent();
+                console.log(error_2);
+                res.send(error_2);
+                return [3 /*break*/, 8];
+            case 8: return [2 /*return*/];
         }
     });
 }); };
