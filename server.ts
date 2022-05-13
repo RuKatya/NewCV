@@ -4,7 +4,6 @@ import cookieParser from 'cookie-parser'
 require('dotenv').config()
 const app = express(); //express
 const PORT = process.env.PORT ?? 5457; //connect to port 5457
-// const fileMiddleware = require('./middleware/file').any()
 app.use(express.json());
 app.use(cookieParser());
 
@@ -12,8 +11,6 @@ connectDB()
 
 app.use(express.static('my-cv/build')) //static
 app.use('/images', express.static('my-cv/public/img')) //static
-
-// app.use(fileMiddleware)
 
 const indexRout = require('./routers/projectRout')
 const contactRout = require('./routers/contactRout')

@@ -10,13 +10,11 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 require('dotenv').config();
 const app = express_1.default(); //express
 const PORT = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : 5457; //connect to port 5457
-// const fileMiddleware = require('./middleware/file').any()
 app.use(express_1.default.json());
 app.use(cookie_parser_1.default());
 connectDB_1.connectDB();
 app.use(express_1.default.static('my-cv/build')); //static
 app.use('/images', express_1.default.static('my-cv/public/img')); //static
-// app.use(fileMiddleware)
 const indexRout = require('./routers/projectRout');
 const contactRout = require('./routers/contactRout');
 const loginRout = require('./routers/loginRout');
