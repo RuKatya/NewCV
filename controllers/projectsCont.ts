@@ -25,6 +25,17 @@ export const hendleAddProject = async (req, res) => {
         console.log(user)
 
         if (decoded && role == user.role) {
+            // let useTo = req.file
+
+            // console.log(useTo);
+            // if (!useTo) {
+            //     res.send("Ошибка при загрузке файла");
+            // } else {
+            //     res.send("Файл загружен");
+            // }
+
+
+
             const newProject = new Project(formObj)
             const result = await newProject.save()
             res.send({ ok: true, result })

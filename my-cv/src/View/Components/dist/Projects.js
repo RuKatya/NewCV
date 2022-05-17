@@ -38,7 +38,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var react_1 = require("react");
 var axios_1 = require("axios");
-var Project_1 = require("./Project/Project");
 var Projects = function () {
     var _a = react_1.useState([]), projects = _a[0], setProjects = _a[1];
     react_1.useEffect(function () {
@@ -47,7 +46,7 @@ var Projects = function () {
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0: return [4 /*yield*/, axios_1["default"].get("/getProjects").then(function (res) {
-                                // setProjects(res.data);
+                                setProjects(res.data);
                             })];
                         case 1:
                             _a.sent();
@@ -58,22 +57,13 @@ var Projects = function () {
         }
         getData();
     }, []);
-    return (react_1["default"].createElement("div", { className: "projects" },
+    react_1.useEffect(function () {
+        console.log(projects);
+    });
+    return (react_1["default"].createElement(react_1["default"].Fragment, null, projects ? (react_1["default"].createElement("div", { className: "projects" },
         react_1["default"].createElement("h2", null, "Projects"),
-        react_1["default"].createElement("div", { className: "projects__eachProject" }, projects ? (react_1["default"].createElement("div", { className: "projects" }, projects.map(function (project) {
-            return react_1["default"].createElement(Project_1["default"], { project: project });
-        }))) : (react_1["default"].createElement("div", { className: "lds-default" },
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null),
-            react_1["default"].createElement("div", null))))));
+        projects.map(function (project) {
+            return react_1["default"].createElement("div", null, project.title);
+        }))) : (react_1["default"].createElement("div", null, "loading"))));
 };
 exports["default"] = Projects;

@@ -15,20 +15,10 @@ const Project = (props: ProjectProps) => {
   console.log(project);
 
   return (
-    <>
-      <div className="projects__eachProject--project">
-        <h3>{project.title}</h3>
-        <img src={project.mainImg} alt={project.title} />
-      </div>
-      {/* <div className="projects__eachProject--project">
-        <h3>{project.title}</h3>
-        <img src={project.mainImg} alt={project.title} />
-      </div>
-      <div className="projects__eachProject--project">
-        <h3>{project.title}</h3>
-        <img src={project.mainImg} alt={project.title} />
-      </div> */}
-    </>
+    <div>
+      {/* <h3>{project.title}</h3> */}
+      {/* <img src={project.mainImg} alt={project.title} /> */}
+    </div>
   );
 };
 

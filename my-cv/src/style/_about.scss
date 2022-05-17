@@ -1,27 +1,31 @@
 .about {
+    h2 {
+        text-align: center;
+    }
+
     &__content {
-        @include backGroundComponents;
-        // background-color: rgb(37, 37, 37);
+        display: flex;
+        flex-flow: row wrap;
+        width: clamp(250px, 80%, 90%);
+        margin: 2% auto;
+        align-items: center;
 
         &--infoText,
         &--skills {
-            // background-color: aquamarine;
+            background-color: aquamarine;
             width: clamp(300px, 48%, 70%);
-            margin: 4% auto;
-            // color: white;
+            margin: 0% auto;
         }
 
         &--infoText {
             font-family: 'Montserrat', sans-serif;
             font-size: clamp(15px, 1.1vw, 35px);
             padding: 1% 0%;
-            color: #FFF;
         }
 
         &--skills {
             font-size: clamp(20px, 1.3vw, 35px);
             list-style-type: none;
-            color: #999;
         }
     }
 }
