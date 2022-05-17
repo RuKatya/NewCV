@@ -3,7 +3,7 @@ import { connectDB } from './connectDB';
 import cookieParser from 'cookie-parser'
 require('dotenv').config()
 const app = express(); //express
-const PORT = process.env.PORT ?? 5457; //connect to port 5457
+const PORT = process.env.PORT ?? 5458; //connect to port 5457
 app.use(express.json());
 app.use(cookieParser());
 
