@@ -1,0 +1,23 @@
+.userForm {
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userForm__theForm {
+  text-align: center;
+  width: clamp(250px, 40%, 600px);
+  display: flex;
+  flex-direction: column;
+  padding: 1% 3% 3% 3%;
+}
+.userForm__theForm input, .userForm__theForm button, .userForm__theForm textarea {
+  border: none;
+  padding: 2% 3%;
+  margin: 1% 0%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}

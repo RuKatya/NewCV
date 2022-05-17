@@ -7,32 +7,41 @@ const Projects = () => {
   useEffect(() => {
     async function getData() {
       await axios.get("/getProjects").then((res) => {
-        setProjects(res.data);
+        // setProjects(res.data);
       });
     }
 
     getData();
   }, []);
 
-  useEffect(() => {
-    console.log(projects);
-  });
   return (
-    <>
-      {projects ? (
-        <div className="projects">
-          <h2>Projects</h2>
-          {projects.map((project: any) => {
-            return <div>{project.title}</div>;
-          })}
-          {/* {projects.map((project: any) => {
-            // return <Project project={project} />;
-          })} */}
-        </div>
-      ) : (
-        <div>loading</div>
-      )}
-    </>
+    <div className="projects">
+      <h2>Projects</h2>
+      <div className="projects__eachProject">
+        {projects ? (
+          <div className="projects">
+            {projects.map((project: any) => {
+              return <Project project={project} />;
+            })}
+          </div>
+        ) : (
+          <div className="lds-default">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 

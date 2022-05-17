@@ -2,16 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
 @import './var/var';
+@import './animation/index';
+@import './mixin/mixin';
 @import './enterPage';
 @import './navBar';
 @import './about';
 @import './projects';
 @import './userForm';
 
+@import './pacman/index';
+
+@import './loader/index';
+
 * {
     transition: 0.8s ease;
     box-sizing: border-box;
-
 }
 
 html {
@@ -20,8 +25,11 @@ html {
 
 body {
     margin: 0;
+    background-color: black;
 }
 
 h2 {
     font-size: $subtitle;
+    text-align: center;
+    color: white;
 }

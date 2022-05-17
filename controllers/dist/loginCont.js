@@ -96,7 +96,7 @@ exports.hendleLogin = function (req, res) { return __awaiter(void 0, void 0, voi
                     res.cookie("userInfo", { name: name, id: user._id, role: user.role }, { maxAge: 60 * 60 * 1000 });
                     payload = { name: name, id: user._id, role: user.role };
                     token = jwt_simple_1["default"].encode(payload, process.env.SECRET);
-                    res.cookie("userInfo", token, { maxAge: 360000 });
+                    res.cookie("userInfo", token, { maxAge: 60 * 60 * 24 * 1000 });
                     res.send({ ok: true, login: true });
                     return [2 /*return*/];
                 }

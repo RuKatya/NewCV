@@ -42,7 +42,7 @@ export const hendleLogin = async (req, res) => {
                 res.cookie(
                     "userInfo",
                     token,
-                    { maxAge: 360000 }
+                    { maxAge: 60 * 60 * 24 * 1000 }
                 );
 
                 res.send({ ok: true, login: true });

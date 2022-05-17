@@ -1,5 +1,15 @@
 .projects {
-    h2 {
-        text-align: center;
+    &__eachProject {
+        // background-color: aqua;
+        @include backGroundComponents;
+
+        &--project {
+            width: clamp(250px, 10%, 70%);
+            // background-color: aquamarine;
+
+            img {
+                width: 50%;
+            }
+        }
     }
 }

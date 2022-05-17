@@ -10,8 +10,8 @@ app.use(cookieParser());
 connectDB()
 
 app.use(express.static('my-cv/build')) //static
-app.use('/images', express.static('my-cv/public/img')) //static
 
+//ROUTERS
 const indexRout = require('./routers/projectRout')
 const contactRout = require('./routers/contactRout')
 const loginRout = require('./routers/loginRout')

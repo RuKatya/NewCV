@@ -14,7 +14,7 @@ app.use(express_1.default.json());
 app.use(cookie_parser_1.default());
 connectDB_1.connectDB();
 app.use(express_1.default.static('my-cv/build')); //static
-app.use('/images', express_1.default.static('my-cv/public/img')); //static
+//ROUTERS
 const indexRout = require('./routers/projectRout');
 const contactRout = require('./routers/contactRout');
 const loginRout = require('./routers/loginRout');
