@@ -1,6 +1,7 @@
 import jwt from "jwt-simple";
 import User from "../models/user";
 import bcrypt from 'bcryptjs';
+import keys from '../keys'
 
 export const hendleReg = async (req, res) => {
     try {
@@ -8,7 +9,7 @@ export const hendleReg = async (req, res) => {
 
         if (name && password) {
             const hashpassword = await bcrypt.hash(password, 10)
-            const hashrole = await bcrypt.hash(process.env.ROLE, 10)
+            const hashrole = await bcrypt.hash(keys.ROLE, 10)
 
             try {
                 const newUser = new User({ name, password: hashpassword, role: hashrole })
@@ -37,7 +38,7 @@ export const hendleLogin = async (req, res) => {
             if (areSame) {
                 res.cookie("userInfo", { name, id: user._id, role: user.role }, { maxAge: 60 * 60 * 1000 });
                 const payload = { name, id: user._id, role: user.role };
-                const token = jwt.encode(payload, process.env.SECRET);
+                const token = jwt.encode(payload, keys.SECRET);
 
                 res.cookie(
                     "userInfo",

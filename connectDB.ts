@@ -1,8 +1,9 @@
 import mongoose from "mongoose"
+import keys from './keys'
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URL, () => {
+        await mongoose.connect(keys.MONGO_URL, () => {
             console.log(`DB connected!`)
         })
     } catch (error) {

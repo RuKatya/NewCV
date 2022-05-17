@@ -1,6 +1,7 @@
 import jwt from "jwt-simple";
 import Project from "../models/projects"
 import User from "../models/user";
+import keys from '../keys'
 const fileMiddleware = require('../middleware/file').any()
 
 export const hendleGetAllProjects = async (req, res) => {
@@ -17,7 +18,7 @@ export const hendleAddProject = async (req, res) => {
     try {
         const { userInfo } = req.cookies;
         const { formObj } = req.body
-        const decoded = jwt.decode(userInfo, process.env.SECRET);
+        const decoded = jwt.decode(userInfo, keys.SECRET);
         const { name, role } = decoded
 
         const user = await User.findOne({ name })
