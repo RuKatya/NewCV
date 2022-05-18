@@ -22,12 +22,12 @@ const Projects = () => {
       {projects ? (
         <div className="projects">
           <h2>Projects</h2>
-          {projects.map((project: any) => {
-            return <div>{project.title}</div>;
-          })}
           {/* {projects.map((project: any) => {
-            // return <Project project={project} />;
+            return <div>{project.title}</div>;
           })} */}
+          {projects.map((project: any) => {
+            return <Project project={project} />;
+          })}
         </div>
       ) : (
         <div>loading</div>

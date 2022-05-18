@@ -38,6 +38,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var react_1 = require("react");
 var axios_1 = require("axios");
+var Project_1 = require("./Project/Project");
 var Projects = function () {
     var _a = react_1.useState([]), projects = _a[0], setProjects = _a[1];
     react_1.useEffect(function () {
@@ -63,7 +64,7 @@ var Projects = function () {
     return (react_1["default"].createElement(react_1["default"].Fragment, null, projects ? (react_1["default"].createElement("div", { className: "projects" },
         react_1["default"].createElement("h2", null, "Projects"),
         projects.map(function (project) {
-            return react_1["default"].createElement("div", null, project.title);
+            return react_1["default"].createElement(Project_1["default"], { project: project });
         }))) : (react_1["default"].createElement("div", null, "loading"))));
 };
 exports["default"] = Projects;
