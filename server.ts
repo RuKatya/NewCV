@@ -1,7 +1,7 @@
 import express from 'express';
 import { connectDB } from './connectDB';
 import cookieParser from 'cookie-parser'
-// require('dotenv').config()
+require('dotenv').config()
 import keys from './keys'
 const app = express(); //express
 const PORT = process.env.PORT || 5458; //connect to port 5457
@@ -22,8 +22,13 @@ app.use('/', contactRout)
 app.use('/personal', express.static('personal')) //static
 app.use('/auth', loginRout)
 
+const config = {
+    server: {
+        port: PORT
+    }
+}
 try {
-    app.listen(PORT, () => {
+    app.listen(config.server.port, () => {
         console.log(`Server listen on http://localhost:${PORT}`)
     })
 } catch (err) {
